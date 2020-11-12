@@ -9,7 +9,7 @@ def multiples(num1, num2):
 
     # Loop through range of numbers from 0-999, adding multiples of 3 and 5 to the list.
     for x in range(0,1000):
-        if x % 3 == 0 or x % 5 == 0:
+        if x % num1 == 0 or x % num2 == 0:
             multiples_list.append(x)
             
     # Use the sum() function to add all numbers in the list.
