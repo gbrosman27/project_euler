@@ -7,16 +7,17 @@
 
 
 def fibonacci_nums(upper_limit):
-    a, b = 0, 1
-    for i in range(upper_limit):
+    # Initialize a, b variables as first two number of fib sequence.
+    a, b = 1, 1
+    # Set total variable equal to 0.
+    total = 0
+    # While a is less than the given limit, if a is an even, add a to the number stored in the total.
+    while a < upper_limit:
+        if a % 2 == 0:
+            total += a
+        # Move the variables to the next numbers in the sequence. ex. 1, 2 = 2, 1+2.
         a, b = b, a + b
-        yield a
-        
-       
-def fib_evens(upper_limit):
-    for num in upper_limit:
-         if num % 2 == 0:
-             yield num
+    return total
         
                   
-print(sum(fib_evens(fibonacci_nums(10))))
+print(fibonacci_nums(4000000))
