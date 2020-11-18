@@ -3,12 +3,31 @@
 
 
 def prime_numbers(num):
+    # Set initial value of where to start the iterations at 2.
+    i = 2
+
+    # Create an empty list to hold prime numbers.
     primes = []
-    for x in range(2, num+1):
-        if num % x == 0:
-            primes.append(x)
+
+    # while each iteration is less than or equal to the passed in number...
+    while i <= num:
+
+        # If the passed in number divided by the current iteration has a remainder of 0...
+        if num % i == 0:
+
+            # Add that number to the list as it is prime.
+            primes.append(i)
+
+            # Set the num equal to the passed in num divided by the current iteration.
+            # This will provide prime factors, not all prime numbers.
+            num = num / i
+        else: 
+
+            # Set i equal to the current iteration + 1 to move the iteration forward.
+            i = i + 1
+
     return primes
 
 
 
-print(prime_numbers(13195))
+print(prime_numbers(600851475143))
