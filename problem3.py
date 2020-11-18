@@ -26,7 +26,7 @@ def prime_numbers(num):
             # Set i equal to the current iteration + 1 to move the iteration forward.
             i = i + 1
 
-    return primes
+    return max(primes)
 
 
 
