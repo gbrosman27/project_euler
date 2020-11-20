@@ -1,8 +1,13 @@
 def palindrome():
-    pals = [item * item+1 for item in range(10,200)]
-    for num in pals:
-        if str(num) == str(num)[::-1]:
-            print(num)
-    
+    i = 100
+    pals = []
+    while i >= 100 and i <= 999:
+        for num in range(100, 1000):
+            prod = i * num
+            if str(prod) == str(prod)[::-1]:
+                pals.append(prod)
+        i += 1
+    return max(pals)
+
 
 print(palindrome())
