@@ -15,6 +15,8 @@ def prime_numbers():
             else:
                 primes.append(num)
     print(primes)
+
+    # Need generator
                            
                 
     
