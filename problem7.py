@@ -4,6 +4,8 @@
 
 def nth_prime(n):
     counter = 2
+
+    # Check all odd numbers up to the passed in number squared.
     for i in range(3, n**2, 2):
         k = 1
         while k*k < i:
